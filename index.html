@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VeggieMart</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">VeggieMart</div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#products">Products</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="cart-icon" onclick="toggleCart()">🛒 <span id="cart-count">0</span></div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <img src="https://images.unsplash.com/photo-1602810313733-bc4cfc68f3fd" alt="Fresh Vegetables" class="hero-img">
+    <div class="hero-text">
+      <h1>Fresh Vegetables Delivered To Your Doorstep</h1>
+      <p>Organic | Fresh | Fast Delivery</p>
+      <button onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">Shop Now</button>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section class="products" id="products">
+    <h2 style="text-align:center; margin-bottom: 1rem;">Our Products</h2>
+    <div class="product-grid" id="product-list"></div>
+  </section>
+
+  <!-- Cart Modal -->
+  <div id="cart" class="cart-panel">
+    <h2>Your Cart</h2>
+    <div id="cart-items"></div>
+    <p><strong>Total: ₹<span id="cart-total">0</span></strong></p>
+    <button onclick="checkout()">Checkout</button>
+  </div>
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <h2>About Us</h2>
+    <p>VeggieMart is committed to delivering farm-fresh vegetables to your door. We work with local farmers who grow their produce organically and sustainably. We ensure freshness by picking and packing your vegetables just hours before delivery.</p>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <form onsubmit="submitForm(event)">
+      <input type="text" placeholder="Name" required>
+      <input type="email" placeholder="Email" required>
+      <textarea placeholder="Message" required></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div>
+      <p>© 2025 VeggieMart</p>
+      <p>123 Green Street, Farmville</p>
+    </div>
+    <div class="socials">
+      <a href="#">Instagram</a> | <a href="#">Facebook</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
